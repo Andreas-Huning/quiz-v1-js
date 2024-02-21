@@ -1,0 +1,122 @@
+
+:root { 
+  --background-color: #314453;
+  --darker-background-color: #243848;
+  --text-color: #ffffff;
+  --navbar-hide-pc: 70px;
+  --navbar-hide-tablet: 50px;
+  --navbar-hide-mobile: 35px; 
+}
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  background-color: var(--darker-background-color);
+  display: flex;
+  justify-content: center;
+}
+body {
+  /*Schriften festlegen*/
+  font-family: "Roboto", "Verdana", "Calibri", sans-serif;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+}
+a {
+  /*Link festlegen*/
+  text-decoration: none;
+  color: var(--background-color);
+}
+.container-main {
+  height: 80vh;
+  width: 90vw;
+  position: relative;
+  top: var(--navbar-hide-pc);
+  background-color: var(--background-color);
+}
+h1 {
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+#quiz-container {
+  margin-top: 80px;
+  margin-left: 10%;
+  max-width: 1200px;
+}
+#ergebnis-container {
+  margin-top: 80px;
+  margin-left: 10%;
+  max-width: 1200px;
+}
+.fragen-container {
+  font-size: 40px;
+}
+
+button {
+  font-size: 20px;
+  min-width: 100px;
+  margin: 5px;
+  padding: 10px;
+}
+#antworten-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 5px;
+}
+#next-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.kategorie-container {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#kategorie-auswahl {
+  font-size: 25px;
+  margin: 5px;
+  min-width: 180px;
+}
+@media (max-width: 1021px) {
+  .fragen-container {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 790px) {
+  .container-main {
+    min-width: 290px;
+  }
+  #quiz-container {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  #ergebnis-container {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  .fragen-container {
+    font-size: 20px;
+  }
+  button {
+    font-size: 15px;
+    min-width: 60px;
+    margin: 5px;
+    padding: 10px;
+  }
+  #kategorie-auswahl {
+    font-size: 20px;
+    margin: 5px;
+    width: 100%;
+  }
+}

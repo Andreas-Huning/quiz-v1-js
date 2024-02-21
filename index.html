@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />  
+    <link
+      rel="stylesheet"
+      href="/fonts/fontawesome-free-6.4.0-web/css/all.css"
+    />  
+    <link rel="stylesheet" href="style.css" />
+    <title>Mein erstes Quiz</title>
+  </head>
+  <body> 
+    <main class="container-main">
+      <h1><!--Überschrift-->Mein erstes Quiz</h1>
+      <div id="quiz-container">
+        <div class="kategorie-container">
+          Kategorien:
+          <select
+            name="kategorie"
+            id="kategorie-auswahl"
+            onchange="neuesSpiel()"
+          >
+            <option value="Hauptstadt">Hauptstädte</option>
+            <option value="Kinder">Kinder</option>
+          </select>
+        </div>
+        <div class="anzahlanfragen-container">
+          Gewünschte Anzahl an Fragen:
+          <select
+            name="fragen-auswahl"
+            id="fragen-auswahl"
+            onchange="neuesSpiel()"
+          >
+            <option id="option1" value=""></option>
+            <option id="option2" value=""></option>
+            <option id="option3" value=""></option>
+            <option id="option4" value=""></option>
+          </select>
+        </div>
+        <div>Anzahl an Fragen: <span id="anzahl-Fragen"></span></div>
+        <div><span id="welche-kategorie"></span></div>
+        <div id="fragen-container" class="fragen-container"></div>
+        <div id="antworten-container"></div>
+        <div id="next-container">
+          <div id="correct-answer"></div>
+          <button id="next-button" onclick="naechsteFrage()">
+            Nächste Frage
+          </button>
+        </div>
+      </div>    
+      <div id="ergebnis-container" hidden>
+        <div class="fragen-container">
+          <h2>Quiz beendet</h2>
+          <p><span id="punkteergebnis"></span></p>
+        </div>
+        <button onclick="neuesSpiel()">Neues Spiel</button>
+      </div>
+    </main>    
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+  </body>
+</html>
